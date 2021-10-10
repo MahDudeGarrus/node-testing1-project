@@ -182,8 +182,16 @@ class Car {
  *    // result is false
  * })
  */
-function isEvenNumberAsync(number) {
-  // ✨ implement
+async function isEvenNumberAsync(number) {
+  if (typeof number !== 'number' || isNaN(number)) {
+    throw new Error('number must be a number')
+  }
+  return number % 2 === 0 || false
+
+  // if(number % 2 === 0) {
+  //   return true
+  // }
+  // return false
 }
 
 module.exports = {
